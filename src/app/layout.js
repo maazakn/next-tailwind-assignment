@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
           <section className='flex-1 overflow-auto'>{children}</section>
 
           <Image
-            className='fixed top-1/3 right-8 cursor-pointer'
+            className='fixed top-1/3 right-8 cursor-pointer lg:inline hidden'
             src={goToProduction}
             alt='goToProduction'
             height={90}

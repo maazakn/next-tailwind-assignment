@@ -1,5 +1,5 @@
 import React from 'react';
-import { logo, globe } from '@/assets';
+import { logo, globe, humberger } from '@/assets';
 import Image from 'next/image';
 
 const Header = () => {
@@ -14,10 +14,17 @@ const Header = () => {
   ];
 
   return (
-    <div className='flex bg-black h-[100px] px-16 items-center justify-between'>
-      <Image src={logo} alt='logo' height={28} width={170} priority />
+    <div className='flex bg-black h-[100px] px-5 lg:px-16 items-center justify-between'>
+      <Image
+        src={logo}
+        alt='logo'
+        height={28}
+        width={170}
+        priority
+        className='w-[121px] h-[20px] lg:w-[170px] lg:h-[28px]'
+      />
 
-      <div className='flex items-center gap-10'>
+      <div className='lg:flex items-center gap-10 hidden'>
         {allRoutes.map((itm, k) => (
           <div key={k} className='relative w-max flex flex-col items-center'>
             <span className='text-white font-pretendard font-bold text-base flex items-center'>
@@ -31,7 +38,15 @@ const Header = () => {
         ))}
       </div>
 
-      <div className='flex items-center gap-8'>
+      <Image
+        src={humberger}
+        alt='humberger'
+        height={20}
+        width={20}
+        className='size-5 lg:hidden'
+      />
+
+      <div className='items-center gap-8 lg:flex hidden'>
         <span className='font-pretendard font-bold text-base text-white'>
           로그인
         </span>
